@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio & Profile - Fajrul Falah (Fajrul Fx)</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- External Custom Style Sheet -->
+    <link rel="stylesheet" href="aset/style/style.css">
+
+    <!-- External JavaScript File -->
+    <script src="aset/js/script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-indigo-600 to-purple-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                    FX
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg leading-none tracking-tight group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                        Fajrul Falah
+                    </span>
+                    <span class="text-xs text-sky-600 dark:text-sky-400 font-medium">a.k.a Fajrul Fx</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-7 font-semibold text-sm">
+                <a href="#tentang" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Tentang</a>
+                <a href="#pendidikan" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Pendidikan & Karir</a>
+                <a href="#paten-inovasi" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Paten & Kursus</a>
+                <a href="#penghargaan" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Penghargaan</a>
+                <a href="#aktivitas" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Seminar</a>
+                <a href="#keahlian-hobi" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Keahlian & Hobi</a>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <a href="https://fajrul.com" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 font-semibold text-xs hover:bg-sky-100 transition-all">
+                    <i class="fa-solid fa-globe"></i> fajrul.com
+                </a>
+
+                <!-- Dark Mode Toggle Button -->
+                <button id="themeToggle" aria-label="Toggle dark mode" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">
+                    <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobileMenuBtn" aria-label="Open mobile navigation" class="lg:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg px-4 pt-2 pb-6 space-y-2">
+            <a href="#tentang" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Tentang Profile</a>
+            <a href="#pendidikan" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Pendidikan & Karir</a>
+            <a href="#paten-inovasi" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Paten & Kursus Genius</a>
+            <a href="#penghargaan" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Penghargaan</a>
+            <a href="#aktivitas" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Aktivitas Seminar</a>
+            <a href="#kontak" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 font-medium">Kontak</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="hero" class="relative py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="flex-1 text-center lg:text-left space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-sky-100 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-800 text-sky-800 dark:text-sky-300 font-bold text-xs tracking-wide uppercase shadow-sm">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
+                            Fisikawan • Komunikator Sains • Inventor
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Halo, Saya <br />
+                            <span class="gradient-text">Fajrul Falah</span>
+                            <span class="block text-2xl sm:text-3xl text-slate-500 dark:text-slate-400 font-semibold mt-1">(Fajrul Fx)</span>
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Lulusan S2 Fisika Cardiff University, UK. Pembuat konten sains populer tentang fisika anime & game di media sosial yang telah ditonton <strong class="text-sky-600 dark:text-sky-400">100+ juta kali</strong> dengan <strong class="text-sky-600 dark:text-sky-400">1.000.000+ Subscribers</strong>.
+                        </p>
+
+                        <!-- Key Stats Summary Cards -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-xl mx-auto lg:mx-0">
+                            <div class="p-3.5 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-center">
+                                <span class="block text-xl sm:text-2xl font-extrabold text-sky-600 dark:text-sky-400">1M+</span>
+                                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Subscribers</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-center">
+                                <span class="block text-xl sm:text-2xl font-extrabold text-purple-600 dark:text-purple-400">100M+</span>
+                                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Total Views</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-center">
+                                <span class="block text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">10+</span>
+                                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Paten Terdaftar</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-center">
+                                <span class="block text-xl sm:text-2xl font-extrabold text-amber-500">M.Sc</span>
+                                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Cardiff Univ, UK</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#kontak" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-700 hover:to-indigo-700 text-white font-bold shadow-lg shadow-sky-500/25 transition-all hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-paper-plane"></i> Hubungi / Kerjasama
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold shadow-lg shadow-red-600/20 transition-all hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                                <i class="fa-brands fa-youtube text-lg"></i> YouTube Channel
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Profile Visual -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-sky-500 via-purple-500 to-indigo-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-80 transition duration-500"></div>
+                        
+                        <div class="relative w-72 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[420px] rounded-2xl overflow-hidden bg-slate-900 border-4 border-white dark:border-slate-800 shadow-2xl flex flex-col items-center justify-center">
+                            <img src="aset/img/fajrul.jpg" 
+                                 alt="Fajrul Falah - Fajrul Fx" 
+                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x500/0284c7/ffffff?text=Fajrul+Falah+(Fajrul+Fx)';">
+                            
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-card text-center shadow-xl border border-white/20">
+                                <p class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Wakil Direktur & Co-Founder</p>
+                                <p class="text-base font-extrabold text-slate-900 dark:text-white">Akademi Inovasi Indonesia</p>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">M.Sc in Physics (Cardiff University)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-16 bg-white dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800/80 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Profil Singkat</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Peran dan fokus utama Fajrul Falah</p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Komunikator Sains</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Membuat konten sains populer tentang fisika di media sosial (fisika anime, game, dan fenomena alam). Telah ditonton lebih dari <strong>100+ juta kali</strong> dengan <strong>1.000.000+ subscribers</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Fisikawan Industri</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Bekerja di <strong>DTECH-ENGINEERING</strong> melakukan kalkulasi fisika terapan untuk mesin <em>CNC Milling 5-axis</em>, <em>cargo drone</em>, hingga mesin motor balap.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-100 dark:bg-purple-950/80 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Inventor & Inovator</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Terdaftar dalam <strong>10+ paten</strong> di bidang rekayasa otomotif & manufaktur mesin CNC hasil kolaborasi pendampingan riset industri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Pendidikan & Pengalaman</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Rekam jejak akademis dan karir profesional resmi</p>
+                    <div class="w-16 h-1 bg-sky-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Education -->
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Riwayat Pendidikan</h3>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-sky-400 dark:border-sky-800 space-y-2">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-white dark:border-slate-950"></div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300 inline-block">2021 – 2022</span>
+                            <h4 class="text-xl font-extrabold">S2 Fisika (M.Sc in Physics)</h4>
+                            <p class="text-sm font-semibold text-sky-600 dark:text-sky-400">Cardiff University, UK</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 pt-1">School of Physics and Astronomy, Cardiff University, United Kingdom.</p>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-sky-400 dark:border-sky-800 space-y-2">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-white dark:border-slate-950"></div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300 inline-block">2015 – 2019</span>
+                            <h4 class="text-xl font-extrabold">S1 Fisika (S.Si)</h4>
+                            <p class="text-sm font-semibold text-sky-600 dark:text-sky-400">Universitas Diponegoro (UNDIP)</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 pt-1">Departemen Fisika, Fakultas Sains dan Matematika UNDIP.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Pengalaman Kerja</h3>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-indigo-400 dark:border-indigo-800 space-y-2">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-slate-950"></div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 inline-block">2023 – Sekarang</span>
+                            <h4 class="text-xl font-extrabold">Wakil Direktur & Dosen</h4>
+                            <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">Akademi Inovasi Indonesia</p>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-indigo-400 dark:border-indigo-800 space-y-2">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-slate-950"></div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 inline-block">2022 – Sekarang</span>
+                            <h4 class="text-xl font-extrabold">Pendiri & Direktur</h4>
+                            <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">Fusi Pustaka</p>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-indigo-400 dark:border-indigo-800 space-y-2">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-slate-950"></div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 inline-block">2019 – 2021</span>
+                            <h4 class="text-xl font-extrabold">Fisikawan Industri</h4>
+                            <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">DTECH-ENGINEERING</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="keahlian-hobi" class="py-16 bg-white dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800/80 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Keahlian & Hobi</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Kompetensi profesional, hobi, dan minat Fajrul Falah (Fajrul Fx)</p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <!-- Main Content Grid: Keahlian (Skills) & Hobi (Hobbies) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Keahlian Utama (Skills) -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Keahlian Utama</h3>
+                        </div>
+
+                        <!-- Skill Item 1 -->
+                        <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-base flex items-center gap-2">
+                                    <i class="fa-solid fa-calculator text-sky-500"></i> Fisika Terapan & Simulasi Industri
+                                </span>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400">Ahli</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                Perhitungan teknis & analisis fisika untuk CNC Milling 5-axis, Cargo Drone, mesin motor balap, serta sintesis nanomaterial (MnO2 & Carbon Nanotube).
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 2 -->
+                        <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-base flex items-center gap-2">
+                                    <i class="fa-solid fa-video text-purple-500"></i> Komunikasi Sains & Storytelling
+                                </span>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400">Ahli</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                Menyederhanakan konsep fisika kuantum & mekanika yang rumit menjadi konten edukasi pop-culture yang menarik, menyenangkan, dan relevan.
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 3 -->
+                        <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-base flex items-center gap-2">
+                                    <i class="fa-solid fa-lightbulb text-amber-500"></i> Pengembangan Inovasi & Paten
+                                </span>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400">Terdaftar 10+ Paten</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                Pendampingan riset terapan, perancangan prototipe teknologi otomotif & manufaktur, hingga penyusunan dokumen paten resmi.
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 4 -->
+                        <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-base flex items-center gap-2">
+                                    <i class="fa-solid fa-chalkboard-user text-emerald-500"></i> Pendidikan Vokasi & Berpikir Kritis
+                                </span>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400">Pengajar</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                Perancangan kurikulum inovasi berbasis masalah nyata, pengajaran critical thinking, serta bimbingan olimpiade & riset akademis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hobi & Minat (Hobbies & Interests) -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Hobi & Minat</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Hobby Card 1 -->
+                            <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 text-center hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-950 text-red-500 flex items-center justify-center text-xl mx-auto mb-3">
+                                    <i class="fa-solid fa-film"></i>
+                                </div>
+                                <h4 class="font-bold text-sm">Nonton Anime & Analisis Fisika</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                    Mengkaji hukum-hukum fisika di balik adu jurus, super power, & adegan anime populer.
+                                </p>
+                            </div>
+
+                            <!-- Hobby Card 2 -->
+                            <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 text-center hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-500 flex items-center justify-center text-xl mx-auto mb-3">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                </div>
+                                <h4 class="font-bold text-sm">Gaming & Game Physics</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                    Bermain game berbasis sandbox/RPG & membedah simulasi gravitasi, mekanika, dan AI dalam game.
+                                </p>
+                            </div>
+
+                            <!-- Hobby Card 3 -->
+                            <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 text-center hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-500 flex items-center justify-center text-xl mx-auto mb-3">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <h4 class="font-bold text-sm">Menulis Buku & Menulis Sains</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                    Menulis buku edukasi, artikel populer (Quora Best Writer), dan jurnal fusi sains.
+                                </p>
+                            </div>
+
+                            <!-- Hobby Card 4 -->
+                            <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 text-center hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <h4 class="font-bold text-sm">Public Speaking & Tech Talk</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                    Berbagi ilmu di seminar nasional, kampus, dan forum teknologi seluruh Indonesia.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="paten-inovasi" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Paten, Inovasi & Kursus</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Karya intelektual terdaftar dan program pengembangan kemampuan berpikir kritis</p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Paten Card -->
+                    <div class="lg:col-span-2 p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">10+ Paten Rekayasa & Teknologi</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Bidang Manufaktur, Otomotif & Mesin CNC</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Fajrul Falah berkontribusi dan terdaftar dalam <strong>10+ paten resmi</strong> di bidang rekayasa teknologi otomotif dan manufaktur mesin CNC. Paten-paten ini lahir dari kolaborasi pendampingan riset terapan bersama mahasiswa dan mitra industri, khususnya pada riset pengembangan mesin CNC Milling 5-axis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">CNC Milling 5-Axis</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300">Cargo Drone Tech</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300">Racing Bike Engine</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300">Superkapasitor Nanomaterial</span>
+                        </div>
+                    </div>
+
+                    <!-- Program Genius Course Card -->
+                    <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-4 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-3">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Genius & Critical Thinking Course</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Program Pelatihan Berpikir Kritis</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                                Program khusus untuk mengasah kerangka berpikir ilmiah, membedah masalah kompleks, dan meningkatkan daya analisis sistematis bagi pelajar dan profesional.
+                            </p>
+                        </div>
+                        <a href="https://fajrul.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs transition-colors mt-4">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Info Kursus di Fajrul.com
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="penghargaan" class="py-16 bg-white dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800/80 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Penghargaan & Prestasi</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Apresiasi nasional dan internasional yang telah diraih</p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Award 1 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-red-100 dark:bg-red-950/80 text-red-600 dark:text-red-400 flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2020</span>
+                            <h4 class="font-extrabold text-base leading-snug">TikTok Indonesia #MasterEdukasi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Silver Medal Winner dalam kategori konten kreator edukasi terbaik.</p>
+                        </div>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2019 • Swiss</span>
+                            <h4 class="font-extrabold text-base leading-snug">Champion of WSIS (PBB)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">World Summit on the Information Society kategori Media di Jenewa, Swiss.</p>
+                        </div>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-quora"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2019</span>
+                            <h4 class="font-extrabold text-base leading-snug">Quora Indonesia Best Writer</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Penulis terbaik bidang edukasi sains populer di platform Quora Indonesia.</p>
+                        </div>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2018 • Jepang</span>
+                            <h4 class="font-extrabold text-base leading-snug">Gold Medal JDIE (Japan)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Japan Design and Innovation Expo pada kategori inovasi teknologi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Award 5 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-plane"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2017</span>
+                            <h4 class="font-extrabold text-base leading-snug">Finalist Airbus Fly Your Ideas</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Babak finalis ke-2 kompetisi rekayasa desain penerbangan internasional Airbus.</p>
+                        </div>
+                    </div>
+
+                    <!-- Award 6 -->
+                    <div class="p-5 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2017 & 2018</span>
+                            <h4 class="font-extrabold text-base leading-snug">Olimpiade Fisika Mahasiswa (ONMIPA)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Honorable Mention Olimpiade Nasional MIPA tingkat Perguruan Tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="aktivitas" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Aktivitas Seminar & Keynote Speaker</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Kegiatan pembicara dan pengisi forum ilmiah di berbagai kampus serta instansi</p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-sky-500 to-indigo-500 mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <!-- Activity Item 1 -->
+                    <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sky-500 transition-colors">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">Depok</span>
+                                <h4 class="font-bold text-base">Seminar Pesta Rakyat Fisika</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Universitas Indonesia (UI) • Pembicara Seminar Utama</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 shrink-0">1 November 2025</span>
+                    </div>
+
+                    <!-- Activity Item 2 -->
+                    <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sky-500 transition-colors">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">Yogyakarta</span>
+                                <h4 class="font-bold text-base">MIPA Expo UGM — Talkshow Fun Physics</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Universitas Gadjah Mada (UGM) • Keynote Speaker</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 shrink-0">22 Oktober 2025</span>
+                    </div>
+
+                    <!-- Activity Item 3 -->
+                    <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sky-500 transition-colors">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">Semarang</span>
+                                <h4 class="font-bold text-base">Seminar Nasional Pekan Ilmiah Fisika UNNES</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Universitas Negeri Semarang • Pembicara Utama</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 shrink-0">13 September 2025</span>
+                    </div>
+
+                    <!-- Activity Item 4 -->
+                    <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sky-500 transition-colors">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Semarang</span>
+                                <h4 class="font-bold text-base">Praktisi Mengajar: Personal Growth and Opportunities in Physics</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Departemen Fisika Universitas Diponegoro (UNDIP) • Dosen Tamu</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 shrink-0">28 Oktober 2024</span>
+                    </div>
+
+                    <!-- Activity Item 5 -->
+                    <div class="p-5 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sky-500 transition-colors">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">Bandung / Online</span>
+                                <h4 class="font-bold text-base">Tech Talk Masjid Salman ITB</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Institut Teknologi Bandung (ITB) • Pemateri Tech Talk</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 shrink-0">24 Maret 2024</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 max-w-md w-full bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-5 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-2xl"></i>
+        <p id="toastMessage" class="text-xs sm:text-sm font-semibold">Pesan Anda berhasil dikirimkan!</p>
+    </div>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-8 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-extrabold text-sky-600 dark:text-sky-400">Fajrul Falah (Fajrul Fx)</span>
+                <span class="text-xs text-slate-400">• Profile Website</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-right">
+                &copy; <span id="year"></span> Fajrul Fx. Website resmi: <a href="https://fajrul.com" target="_blank" class="underline text-sky-500">fajrul.com</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
